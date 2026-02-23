@@ -1,4 +1,4 @@
-# Open Threat Taxonomy (OTC)
+# Open Threat Classification (OTC)
 
 A public, versioned classification of threat patterns found in AI agent skills, MCP servers, and plugins. Maintained by [Oathe](https://oathe.ai).
 
