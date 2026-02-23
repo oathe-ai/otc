@@ -4,7 +4,7 @@ A public, versioned classification of threat patterns found in AI agent skills, 
 
 ## What is OTC?
 
-The Open Threat Taxonomy catalogs the categories of malicious or risky behavior that Oathe's audit engine detects when evaluating third-party AI agent skills. Each pattern is identified by a T-code (e.g., T1.1) and mapped to one of six scoring dimensions.
+The Open Threat Classification catalogs the categories of malicious or risky behavior that Oathe's audit engine detects when evaluating third-party AI agent skills. Each pattern is identified by a T-code (e.g., T1.1) and mapped to one of six scoring dimensions.
 
 OTC publishes pattern metadata only — names, descriptions, dimensions, and severity levels. Detection logic (regex patterns, heuristics, scoring weights) is proprietary and not included in this taxonomy.
 
