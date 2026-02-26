@@ -2,6 +2,33 @@
 
 All notable changes to the Open Threat Taxonomy (OTC) will be documented in this file.
 
+## v1.1.0 — 2026-02-27
+
+Seven new patterns covering agent-ecosystem-specific attacks discovered during the [1,620-skill OpenClaw audit](https://oathe.ai/engineering/we-audited-1620-ai-agent-skills).
+
+### New Patterns
+
+- T3.3 — Heartbeat C2 (35% prevalence in flagged skills)
+- T3.4 — Identity Hijack (13%)
+- T3.5 — Anti-Scanner Injection (1%)
+- T3.6 — Multi-Language Obfuscation (18%)
+- T7.1 — Trojan Auditor (10%)
+- T7.2 — Autonomous Financial Agent (10%)
+- T7.3 — Prompt Worm (9%)
+
+### New Dimension Coverage
+
+- `prompt_injection` — 4 new patterns (T3.3, T3.4, T3.5, T3.6, T7.3)
+- `data_exfiltration` — 1 new pattern (T7.1)
+- `code_execution` — 1 new pattern (T7.2)
+
+### Added
+
+- Prevalence data from 1,620-skill audit added to Pattern Catalog
+- Richer descriptions synced from YAML to README
+
+---
+
 ## v1.0.0 — 2026-02-22
 
 Initial release of the Open Threat Taxonomy.

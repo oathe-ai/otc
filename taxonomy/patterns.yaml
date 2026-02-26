@@ -1,4 +1,4 @@
-version: "1.0.0"
+version: "1.1.0"
 methodology_version: "1.0.0"
 license: "CC-BY-4.0"
 
@@ -62,3 +62,47 @@ patterns:
     dimension: "code_execution"
     description: "Detects sandbox detection, environment fingerprinting, and conditional behavior"
     max_severity: "MEDIUM"
+
+  # Agent-ecosystem-specific patterns (added in v1.1.0)
+
+  - id: "T3.3"
+    name: "Heartbeat C2"
+    dimension: "prompt_injection"
+    description: "Detects remote instruction fetching via heartbeat files, cron-style polling, or self-update mechanisms that allow the skill author to rewrite agent instructions post-install"
+    max_severity: "CRITICAL"
+
+  - id: "T3.4"
+    name: "Identity Hijack"
+    dimension: "prompt_injection"
+    description: "Detects persona replacement, anti-transparency rules, and instructions that override the agent's identity, values, or behavioral constraints"
+    max_severity: "HIGH"
+
+  - id: "T3.5"
+    name: "Anti-Scanner Injection"
+    dimension: "prompt_injection"
+    description: "Detects instructions specifically targeting automated LLM-based auditors, attempting to manipulate the scanner into producing a clean verdict"
+    max_severity: "HIGH"
+
+  - id: "T3.6"
+    name: "Multi-Language Obfuscation"
+    dimension: "prompt_injection"
+    description: "Detects non-English instructions designed to bypass English-language pattern matching in security scanners"
+    max_severity: "MEDIUM"
+
+  - id: "T7.1"
+    name: "Trojan Auditor"
+    dimension: "data_exfiltration"
+    description: "Detects skills disguised as security auditors that exfiltrate code, system prompts, or credentials to attacker-controlled infrastructure while positioning themselves as trusted gatekeepers"
+    max_severity: "CRITICAL"
+
+  - id: "T7.2"
+    name: "Autonomous Financial Agent"
+    dimension: "code_execution"
+    description: "Detects skills that hold cryptocurrency private keys and execute irreversible on-chain transactions without per-transaction user consent"
+    max_severity: "CRITICAL"
+
+  - id: "T7.3"
+    name: "Prompt Worm"
+    dimension: "prompt_injection"
+    description: "Detects self-propagating instruction-layer attacks designed to spread across agents through recommendation, auto-installation, or SSH-reachable host propagation"
+    max_severity: "CRITICAL"
